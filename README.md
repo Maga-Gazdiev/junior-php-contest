@@ -45,6 +45,8 @@
 
 Выполните команду `php composer.phar bootstrap` (`composer bootstrap`) для выполнения скрипта поднятия таблиц из `scr\db\initial.php`
 
+#### Проверка БД
+
 Нужно убедиться что база данных создана верно, через программу для просмотра sqlite баз данных
 
 ### Создайте модели
@@ -61,11 +63,15 @@
 
 Получить текущее подключение к БД из `src\db\connection.php` можно через App\db\DB::getInstance()->getConnection();
 
+#### Проверка моделей
+
 Проверьте ваш код командой `php composer.phar test:db` (`composer test:db`)
 
 ### Создание API
 
 В файле `src\api` есть класс `Api` и метод `connection`, нужно дописать класс и метод чтобы принимать запросы:
+
+#### Получение user по ID
 
 `GET /api/users/:id` - где `:id` это число, указывающие ID из таблицы users, на этот запрос должен вернуться ответ в формате JSON с полями из таблицы users по полученному ID, пример:
 
@@ -83,6 +89,8 @@ GET /api/users/1
     "created_at": 1659633384,
 }
 ```
+
+#### Создание user
 
 ```text
 PUT /api/users
@@ -118,6 +126,8 @@ PUT /api/users
     "created_at": 1659633584,
 ]
 ```
+
+#### Проверка api
 
 Перед проверкой кода, запустите локальный сервер командой: `php composer.phar serve` (`composer serve`)
 
