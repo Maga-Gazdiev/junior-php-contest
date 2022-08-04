@@ -5,7 +5,7 @@ namespace App\Tests;
 use App\Models\User;
 use App\Models\Post;
 
-class MainTest extends BaseTest
+class DBTest extends BaseTest
 {
     public function testOne()
     {
