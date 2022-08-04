@@ -41,7 +41,7 @@
 4) creator_id - связь с user.id
 5) created_at - число
 
-Выполните команду `php composer.phar bootstrap` (`composer bootstrap`)
+Выполните команду `php composer.phar bootstrap` (`composer bootstrap`) для выполнения скрипта поднятия таблиц из `scr\db\initial.php`
 
 Нужно убедиться что база данных создана верно, через программу для просмотра sqlite баз данных
 
