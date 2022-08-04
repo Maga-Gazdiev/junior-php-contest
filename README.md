@@ -119,6 +119,8 @@ PUT /api/users
 ]
 ```
 
+Перед проверкой кода, запустите локальный сервер командой: `php composer.phar serve` (`composer serve`)
+
 Проверьте ваш код командой `php composer.phar test:api` (`composer test:api`)
 
 ## Запустите тест
