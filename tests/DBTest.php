@@ -5,6 +5,9 @@ namespace App\Tests;
 use App\Models\User;
 use App\Models\Post;
 
+require_once 'src/Models/PostModel.php';
+require_once 'src/Models/UserModel.php';
+
 class DBTest extends BaseTest
 {
     public function testOne()

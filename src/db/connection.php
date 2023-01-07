@@ -2,12 +2,20 @@
 
 namespace App\db\connection;
 
+use SQLite3;
+
 function createConnection()
 {
     $dbPath = __DIR__ . '/../../db.sqlite';
-    touch($dbPath);
+    if (file_exists($dbPath) === true) {
+        $db = null;
+        $db = new SQLite3($dbPath);
+    } elseif (file_exists($dbPath) === false) {
+        $db = null;
+        $db = new SQLite3($dbPath);
+        touch($dbPath);
+    }
 
-    $db = null;
 
     //TODO: Create connection to Sqlite DB
 
